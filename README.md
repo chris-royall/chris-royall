@@ -30,11 +30,16 @@
 <li>AWS Certified Cloud Practitioner</li>
 </ul>
 </div>
+      
+<div>
+  <h2>&#129488 Technical Skills</h2>
+    <p>SaaS &nbsp PaaS &nbsp IaaS &nbsp Microsoft &nbsp AWS &nbsp Jira &nbsp HTML &nbsp CSS &nbsp DevOps
+</div>
 
 <div>
 <h2>&#128295 AWS Projects</h2>
 <ul>
-  <li><a href="https://chrisroyall.com">See chrisroyall.com</a></li>
+  <li><a href="https://www.chrisroyall.com/awshoststaticwebsite/">Host Static Website</a></li>
     </ul>
   </div>
 
