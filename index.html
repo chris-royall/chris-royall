@@ -3,35 +3,147 @@
 
 <head>
   <link rel="stylesheet" href="style.css">
-  <title>Chris Royall</title>
+  <title>Chris Royall - Host Static Website</title>
   </head>
 
   <body>
-      <h1>
-      Chris Royall</br>
-      
-      </br>
-      <img src="images/microsoft-365-certified-fundamentals.png" style="width:125px;height:125px;">
-      <img src="images/CERT-Associate-Microsoft365-Teams-Administrator.png" style="width:125px;height:125px;">
-      <img src="images/microsoft-certified-azure-fundamentals.png" style="width:125px;height:125px;">
-      <img src="images/aws-certified-cloud-practitioner%20v2.png" style="width:125px;height:125px;">
-      <img src="images/aws-cloud-quest-cloud-practitioner.png" style="width:125px;height:125px;">
-      <img src="images/aws-educate-introduction-to-cloud-101.png" style="width:125px;height:125px;">
-      </h1>
+<h1><a href="https://chrisroyall.com"><button class="homebutton homebutton1">Home</button></a></br>
 
+  Host Static Website on AWS</h1>
+</h1>
 <div>
-<h2>&#129299 Welcome!</h2>
-<p>Thank you for visiting my portfolio.</p>
-<p>I have documented below projects that I have completed using my personal AWS account.</br>
-  Within each project, you will find the required goal, details of how I have completed that goal, and the reasoning behind my decisions.</p>
+<p>In this project, I have hosted a static website on AWS infrastructure.</p>
+<p>First, I registered a new domain using Route 53 as I did not have an active domain already. By registering this with AWS directly, this would reduce the need to configure a Hosted Zone to connect the domain with AWS services.</p>
+<p>I began the website configuration by creating an S3 Bucket containing a test HTML file. This will present content when navigating to the newly registered domain. The S3 Bucket will be configured to route to the URL without 'www' For those users that navigate to the website with 'www' in the URL, a secondary S3 Bucket will be required to redirect the user to the 'main' S3 bucket.</p>
+<p>I then needed to connect the S3 Buckets with the domain in Route 53. This would ensure: when navigating to the main web address, the user will be directed to the main S3 Bucket; When navigating to the secondary web address, the user will be directed to the secondary S3 Bucket, which will then be redirected to the main S3 Bucket. This will be configured through the use of a new A record.</p>
+<p>The website is now live and accessible to users accessing the main web address and the secondary web address. However, the site is not yet considered secure. Two tasks will need completing: Creating an SSL Certificate in AWS Certificate Manager;</p>
+<p>I requested an SSL Certificate for the main web address and the secondary web address. This would ensure no matter which web address users would be access, the website would remain secure for both. I used DNS validation as I have access to the domain. I then used AWS Certificate Manager to create two CNAME records in the Hosted Zone, one for each web address. This would ensure the certificate can access and verify the domain.</p>
+<p>The final step is to configure a distribution in CloudFront. This would provide the ability to provide the webpage using HTTPS protocol and devliering content to the user faster using Edge locations.</p>
+<p>I navigated to CloudFront to create two Distributions, one for each webpage. When attempting to select the SSL Certificate, I observed the certificate need to be created in the us-east-1 region. I therefore removed my previously configured SSL Certificate in the eu-west-2 region, and created the same configuration in the us-east-1 region.</p>
+<p>Having overcome this problem, I then proceeded create the Distribution. I select the price class 'Use only North America and Europe' to minimise costs. Finally, I amended the A records of the domain to route the traffic to the Cloud Front Distributions.</p>
 </div>
 
 <div>
-  <h2>&#128295 AWS Projects</h2>
-  <a href="https://www.chrisroyall.com/awshoststaticwebsite"><button class="button button1">Host Static Website</button></a>
-    </div>
+<h2>Services</h2>
+<p><img src="images/awshoststaticwebsite.png" style="width:40%;height:40%;"></p>
+</div>
+    
+<div>
+<h2>Steps</h2>
+
+<button type="button" class="collapsible"><h3>+ Register domain on Route 53</h3></button>
+<div class="content">
+  <ol>
+    <p><li>First, I navigate to 'Route 53' and select 'Register domain'.</br>
+      <img src="images/1.1.png" style="width:95%;height:95%;"></li></p>
+    <p><li>I entered my chosen domain domain and select 'Check' and 'Add to cart'.</br>
+      Then I selected all mandatory fields and selected 'Complete Order'.</br>
+      My domain is now ready to use.</br>
+      <img src="images/1.2.png" style="width:95%;height:95%;"></li></p>
+  </ol>
+</br>
+</div>
   
-  </body>
+<button type="button" class="collapsible"><h3>+ Create the main S3 Bucket and upload content</h3></button>
+<div class="content">
+  <ol>
+    <p><li>I navigated to 'S3' and selected 'Create bucket'.</br>
+      <img src="images/2.1.png" style="width:95%;height:95%;"></li></p>
+    <p><li>I entered the 'Bucket name' as the 'main' web address and unticked 'Block all public access', to make content within the bucket externally accessible.</br>
+      Then, I selected 'Create bucket'.</br>
+      <img src="images/2.2.png" style="width:95%;height:95%;"></li></p>
+    <p><li>To upload content to the bucket, I selected 'Upload', 'Add files' and selected the index.html file that I wanted to be presented.</br>
+      <img src="images/2.3.png" style="width:95%;height:95%;"></li></p>
+    <p><li>I navigated to the Bucket and selected 'Permissions', 'Bucket policy, then 'Edit'. </br>
+      I entered a policy to allow read access to the Bucket content, then selected 'Save changes.'.</br>
+      <img src="images/2.4.png" style="width:95%;height:95%;"></li></p>
+<p><li>To edit the hosting settings, I navigated to the Bucket and selected "Properties'.</br>
+      Next I navigated to 'Static website hosting', 'Edit' and selected 'Enable' for 'Static website hosting' and selected 'Host a static website' for 'Hosting type'.</br>
+      Then I selected 'Save changes'.</br>
+      <img src="images/2.5.png" style="width:95%;height:95%;"></li></p>
+  </ol>
+  </br>
+</div>
+
+<button type="button" class="collapsible"><h3>+ Create the redirect S3 Bucket</h3></button>
+<div class="content">
+  <ol>
+    <p><li>I navigated to 'S3' and selected 'Create bucket'.</br>
+      <img src="images/3.1.png" style="width:95%;height:95%;"></li></p>
+    <p><li>I entered the 'Bucket name' as the 'secondary' web address.</br>
+      Then, selected 'Create bucket'.</br>
+      <img src="images/3.2.png" style="width:95%;height:95%;"></li></p>
+    <p><li>To edit the hosting settings, I navigated to the Bucket and select "Properties'.</br>
+      Next I navigated to 'Static website hosting', 'Edit' and selected 'Enable' for 'Static website hosting' and selected 'Redirect requests for an object' for 'Hosting type'.</br>
+      I also entered the 'main' website into 'Host name' and selected 'None' for 'Protocol'.</br>
+      I then selected 'Save changes'.</br>
+      <img src="images/3.3.png" style="width:95%;height:95%;"></li></p>
+    </ol>
+  </br>
+  </div>
+
+  <button type="button" class="collapsible"><h3>+ Connect S3 Buckets with domain in Route 53</h3></button>
+  <div class="content">
+  <ol>
+    <p><li>I navigate to 'Route 53', selected the domain, then 'Create record'.</br></br>
+      <img src="images/4.1.png" style="width:95%;height:95%;"></li></p>
+      <p><li>I created a new A record to route traffic to the 'main' S3 Bucket.</br>
+      <img src="images/4.2.png" style="width:95%;height:95%;"></li></p>
+    <p><li>I repeated the same process to create another A record to route traffic to the 'secondary' S3 Bucket.</br>
+      <img src="images/4.3.png" style="width:95%;height:95%;"></li></p>
+  </ol>
+  </br>
+</div>
+  
+  <button type="button" class="collapsible"><h3>+ Create SSL Certificate</h3></button>
+  <div class="content">
+  <ol>
+  <p><li>I navigated to 'Certificate Manager' and selected 'Request'.</br>
+      <img src="images/5.1.png" style="width:95%;height:95%;"></li></p>
+  <p><li>I entered the 'Fully Qualified Domain Names' and selected the 'DNS validation' method.</br>
+          Then selected 'Request.</br>
+      <img src="images/5.2.png" style="width:95%;height:95%;"></li></p>
+   <p><li>I navigated to the newly created certificate and selected 'Create records for Route 53.</br>
+          I then reviewed the content and selected 'Create records'.</br>
+      <img src="images/5.3.png" style="width:95%;height:95%;"></li></p>
+  </ol>
+  </br>
+  </div>
+  
+  <button type="button" class="collapsible"><h3>+ Configure CloudFront Distributions</h3></button>
+  <div class="content">
+  <ol>
+  <p><li>First, I navigated to the main S3 Bucket and copied endpoint URL.</br>
+      <img src="images/6.1.png" style="width:95%;height:95%;"></li></p>
+  <p><li>I navigated to 'CloudFront' and selected 'Create a CloudFront distribution.</br>
+      <img src="images/6.2.png" style="width:95%;height:95%;"></li></p>
+ <p><li>I entered the copied URL into 'Origin domain'.</br>
+      <img src="images/6.3.png" style="width:95%;height:95%;"></li></p>
+   <p><li>Then, I selected 'Redirect HTTP to HTTPS'.</br>
+      <img src="images/6.4.png" style="width:95%;height:95%;"></li></p>
+   <p><li>I selected the Price Class, entered the Alternative Domain Name as the main web address, and the Custom SSL Certificate.</br>
+      <img src="images/6.5.png" style="width:95%;height:95%;"></li></p>
+   <p><li>I repeated the same process to create another Distribution for the secondary web address.</br>
+          Then, I navigated to S3 and changed the secondary S3 Bucket to use HTTPS protocol</br>
+      <img src="images/6.6.png" style="width:95%;height:95%;"></li></p>
+   <p><li>Change the A records for the main web address and secondary web address to route traffic to the CloudFront Distributions</br>
+      <img src="images/6.7.png" style="width:95%;height:95%;"></li></p>
+  </ol>
+  </br>
+  </div>
+
+<button type="button" class="collapsible"><h3>+ Results</h3></button>
+<div class="content">
+  <p>The user is now presented with the https webpage when navigating to the main web address (xxxxx.com) or the secondary web address (www.xxxxx.com).</br>
+    The web address is also secure with the SSL Certificate and is visible to users.</br>
+    <img src="images/7.1.png" style="height:50px;"></br>
+    <img src="images/7.2.png" style="height:50px;"></p>
+  </br>
+  </div> 
+
+  </div>
+
+</body>
 
   <footer>
     <a href="mailto:chris@chrisroyall.com"><img src="images/email.png" style="width:50px;height:50px;"></a>&nbsp;&nbsp;&nbsp;
@@ -40,5 +152,22 @@
     <p>Author: Christopher Royall</br>
     All views are my own</p>
   </footer>
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+    </script>
 
 </html>
