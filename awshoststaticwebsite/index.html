@@ -19,7 +19,7 @@
 <p>The website is now live and accessible to users accessing the main web address and the secondary web address. However, the site is not yet considered secure. Two tasks will need completing: Creating an SSL Certificate in AWS Certificate Manager;</p>
 <p>I requested an SSL Certificate for the main web address and the secondary web address. This would ensure no matter which web address users would be access, the website would remain secure for both. I used DNS validation as I have access to the domain. I then used AWS Certificate Manager to create two CNAME records in the Hosted Zone, one for each web address. This would ensure the certificate can access and verify the domain.</p>
 <p>The final step is to configure a distribution in CloudFront. This would provide the ability to provide the webpage using HTTPS protocol and devliering content to the user faster using Edge locations.</p>
-<p>I navigated to CloudFront to create two Distributions, one for each webpage. When attempting to select the SSL Certificate, I observed the certificate needs to be created in the us-east-1 region. I therefore removed my previously configured SSL Certificate in the eu-west-2 region, and created the same configuration in the us-east-1 region.</p>
+<p>I navigated to CloudFront to create two Distributions, one for each webpage. When attempting to select the SSL Certificate, I observed the certificate need to be created in the us-east-1 region. I therefore removed my previously configured SSL Certificate in the eu-west-2 region, and created the same configuration in the us-east-1 region.</p>
 <p>Having overcome this problem, I then proceeded create the Distribution. I select the price class 'Use only North America and Europe' to minimise costs. Finally, I amended the A records of the domain to route the traffic to the Cloud Front Distributions.</p>
 </div>
 
@@ -143,6 +143,8 @@
 
   </div>
 
+</body>
+
   <footer>
     <a href="mailto:chris@chrisroyall.com"><img src="images/email.png" style="width:50px;height:50px;"></a>&nbsp;&nbsp;&nbsp;
       <a href="https://github.com/chris-royall" target="_blank"><img src="images/github.jpeg" style="width:50px;height:50px;"></a>&nbsp;&nbsp;&nbsp;
@@ -168,5 +170,4 @@
     }
     </script>
 
-</body>
 </html>
