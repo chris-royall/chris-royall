@@ -4,6 +4,7 @@ h1 {
 
 h2 {
   font-family: Arial, sans-serif;
+  color:rgb(0, 0, 0)
 }
 
 h3 {
@@ -50,6 +51,7 @@ footer {
   margin-right: 50px;
   margin-left: 50px;
   color: white;
+  font-size: 12px;
 }
 
 .collapsible {
@@ -62,7 +64,8 @@ footer {
 }
 
 .active, .collapsible:hover {
-  background-color: rgb(0, 46, 182);
+  background-color: rgb(237, 143, 56);
+  transition-duration: 0.3s;
 }
 
 .content {
@@ -71,5 +74,5 @@ footer {
   border-style: solid;
   border-top: 2px;
   border-bottom: 2px;
-  border-color: rgb(0, 46, 182);
+  border-color: rgb(237, 143, 56);
 }

@@ -4,6 +4,7 @@ h1 {
 
 h2 {
   font-family: Arial, sans-serif;
+  color:rgb(0, 0, 0)
 }
 
 p {
@@ -41,4 +42,30 @@ footer {
   margin-right: 50px;
   margin-left: 50px;
   color: white;
+  font-size: 12px;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: rgb(237, 143, 56); 
+  color: rgb(0, 0, 0); 
+  border: 5px solid rgb(0, 22, 90);
+}
+
+.button1:hover {
+  background-color: rgb(0, 22, 90);
+  color: white;
+  border: 5px solid rgb(237, 143, 56);
 }

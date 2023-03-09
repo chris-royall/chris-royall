@@ -7,6 +7,7 @@
       <img src="images/microsoft-certified-azure-fundamentals.png" style="width:125px;height:125px;">
       <img src="images/aws-certified-cloud-practitioner%20v2.png" style="width:125px;height:125px;">
       <img src="images/aws-cloud-quest-cloud-practitioner.png" style="width:125px;height:125px;">
+      <img src="images/aws-educate-introduction-to-cloud-101.png" style="width:125px;height:125px;">
       </h1>
 
 <div>
