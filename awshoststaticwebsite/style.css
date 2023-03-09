@@ -76,3 +76,28 @@ footer {
   border-bottom: 2px;
   border-color: rgb(237, 143, 56);
 }
+
+.homebutton {
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+
+.homebutton1 {
+  background-color: rgb(237, 143, 56); 
+  color: rgb(0, 0, 0); 
+  border: 5px solid rgb(0, 134, 18);
+}
+
+.homebutton1:hover {
+  background-color: rgb(0, 134, 18);
+  color: white;
+  border: 5px solid rgb(237, 143, 56);
+}
