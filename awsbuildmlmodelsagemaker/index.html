@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <title>Chris Royall - Build ML Model with SageMaker Canvas</title>
+  </head>
+
+  <body>
+<h1><a href="https://chrisroyall.com"><button class="homebutton homebutton1">Home</button></a></br>
+
+  Build ML Model with SageMaker Canvas</h1>
+</h1>
+<div>
+<p>In this project, I am building and experimenting with my first ML model using AWS SageMaker. By using SageMaker Canvas, this provide a low-code experience for the user, and is suitable for individuals who do not have coding experience. My ML model would be used to predict house prices.</p>
+<p>First, I changed my Region from eu-west-2 to eu-west-1, as I was aware SageMaker Canvas is only available in specific Regions. I then proceeded to create a SageMaker Domain.</p>
+<p>I then proceeded to upload data to the S3 Bucket that was created during the creation of the SageMaker Domain, and import this data to the Canvas.</p>
+<p>I can now begin to build my ML model, by first selecting the dataset, then selecting the target column. In this scenario, since I am analysing house prices, I select the “median_house_value” column. I then progress with a Standard Build instead of Quick Build, as I preferred more accuracy at a result of a higher build time.</p>
+<p>Once the ML model has completed the build, I can now analyse the dataset. I am able to see 'latitude', 'longitude' and 'total_rooms' have a high impact on a house price. I will now be able to use my ML model to predict a house price by entering batch or singular data. For my testing, I have entered some random data to understand the impact.</p>
+<p><b>Next time</b></br>
+  I would add a CORS Policy to the S3 Bucket which would allow data to be synced from SageMaker Canvas to the S3 Bucket. This would allow me to upload data directly to model in SageMaker Canvas, without the requiring access to S3. Therefore, following the best practise of least privilege.</p>
+</div>
+
+<div>
+<h2>Services</h2>
+<p><img src="images/awsbuildmlmodelsagemaker.png" style="width:23%;height:23%;"></p>
+</div>
+    
+<div>
+<h2>Steps</h2>
+
+<button type="button" class="collapsible"><h3>+ Create SageMaker Domain</h3></button>
+<div class="content">
+  <ol>
+    <p><li>First, I navigated to 'SageMaker' and selected 'Create a SageMaker domain'.</br>
+      <img src="images/1.1.png" style="width:95%;height:95%;"></li></p>
+    <p><li>I entered a 'Name' for the new Domain, a 'Name' for the User profile.</br>
+      I created a new Execution Role with access to all S3 Buckets.</br>
+      <img src="images/1.2.png" style="width:95%;height:95%;"></li></p>
+  </ol>
+</br>
+</div>
+
+<button type="button" class="collapsible"><h3>+ Import dataset to S3 and SageMaker Canvas</h3></button>
+<div class="content">
+  <ol>
+    <p><li>I navigated to 'S3' and selected the 'sagemaker-studio' Bucket.</br>
+      <img src="images/2.1.png" style="width:95%;height:95%;"></li></p>
+    <p><li>I imported the dataset and selected 'Upload'.</br>
+      <img src="images/2.2.png" style="width:95%;height:95%;"></li></p>
+    <p><li>I then navigated back to the SageMaker domain previously created, and selected 'Launch', then 'Canvas'.</br>
+      <img src="images/2.3.png" style="width:95%;height:95%;"></li></p>
+    <p><li>Next, I selected 'Import'.</br>
+      <img src="images/2.4.png" style="width:95%;height:95%;"></li></p>
+    <p><li>To locate the file, I selected 'S3', then selected the file, then 'Import data'.</br>
+      <img src="images/2.5.png" style="width:95%;height:95%;"></li></p>
+  </ol>
+</br>
+</div>
+
+<button type="button" class="collapsible"><h3>+ Select and Build ML model</h3></button>
+<div class="content">
+  <ol>
+    <p><li>To build my model, I navigated to 'New model', added a 'Model name', then selected 'Create'.</br>
+      <img src="images/3.1.png" style="width:95%;height:95%;"></li></p>
+    <p><li>I selected the dataset I previously uploaded, then navigated to 'Select dataset'.</br>
+      <img src="images/3.2.png" style="width:95%;height:95%;"></li></p>
+    <p><li>I used the drop-down menu to select my required 'Target column'.</br>
+      In this scenario, I wanted to analyse house prices.</br>
+      I then selected 'Standard build' to get the most accurate results.</br>
+      <img src="images/3.3.png" style="width:95%;height:95%;"></li></p>
+  </ol>
+</br>
+</div>
+
+<button type="button" class="collapsible"><h3>+ Analyse and Predict ML model</h3></button>
+<div class="content">
+  <ol>
+    <p><li>I selected 'Predict'.</br>
+      <img src="images/4.1.png" style="width:95%;height:95%;"></li></p>
+    <p><li>I proceeded to run a 'Single prediction'.</br>
+      I increased the 'total_rooms' value by 25%.</br>
+      <img src="images/4.2.png" style="width:95%;height:95%;"></li></p>
+  </ol>
+</br>
+</div>
+  
+  </div>
+
+</body>
+
+  <footer>
+    <a href="mailto:chris@chrisroyall.com"><img src="images/email.png" style="width:50px;height:50px;"></a>&nbsp;&nbsp;&nbsp;
+      <a href="https://github.com/chris-royall" target="_blank"><img src="images/github.jpeg" style="width:50px;height:50px;"></a>&nbsp;&nbsp;&nbsp;
+      <a href="https://linkedin.com/in/chris-royall" target="_blank"><img src="images/linkedin.png" style="width:50px;height:50px;"></a></br>
+    <p>Author: Christopher Royall</br>
+    All views are my own</p>
+  </footer>
+
+<script type="text/javascript" src="script.js"></script>
+
+</html>
