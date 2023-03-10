@@ -20,7 +20,8 @@
 <div>
   <h2>&#128295 AWS Projects</h2>
   <ul>
-    <li><a href="https://www.chrisroyall.com/awshoststaticwebsite/">Host Static Website</a></li>
+    <li><a href="https://www.chrisroyall.com/awshoststaticwebsite">Host Static Website</a></li>
+    <li><a href="https://www.chrisroyall.com/awsbuildmlmodelsagemaker">Build ML Model with SageMaker Canvas</a></li>
       </ul>
     </div>
   
