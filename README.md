@@ -14,6 +14,7 @@ Angular (HTML, CSS, TypeScript), GitHub, AWS (Amplify, Route 53, API Gateway, La
 
 ## 
 <a href="https://www.credly.com/badges/a41964c2-fa5e-4a70-9679-f54e1716f80d/public_url" target="_blank"><img src="secondary_badges/aws-cloud-quest-cloud-practitioner.png" alt="aws-cloud-quest-cloud-practitioner" height="100" width="100"/></a>
+<a href="https://www.credly.com/badges/17653143-16b3-4e17-bce6-593bc0c3e888/public_url" target="_blank"><img src="secondary_badges/aws-cloud-quest-solutions-architect.png" alt="aws-cloud-quest-solutions-architect" height="100" width="100"/></a>
 <a href="https://www.credly.com/badges/bf7123f8-d6fa-4668-a586-297a335a77ee/public_url" target="_blank"><img src="secondary_badges/aws-knowledge-cloud-essentials.png" alt="aws-knowledge-cloud-essentials" height="100" width="100"/></a>
 <a href="https://www.credly.com/badges/b489d308-1721-420c-80e9-4451fa8c2df0/public_url" target="_blank"><img src="secondary_badges/aws-educate-introduction-to-cloud-101.png" alt="aws-educate-introduction-to-cloud-101" height="100" width="100"/></a>
 <a href="https://www.credly.com/badges/6fddf01b-631e-4ebe-92e9-b940094ded6c/public_url" target="_blank"><img src="secondary_badges/aws-educate-getting-started-with-cloud-ops.png" alt="aws-educate-getting-started-with-cloud-ops" height="100" width="100"/></a>
