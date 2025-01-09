@@ -20,6 +20,10 @@
 <a href="https://github.com/chris-royall/portfolio">GitHub Repository</a></br>
 <a href="https://recipes.chrisroyall.com">Web Application</a></br></p>
 
+### AWS CloudFormation Deployed IAM Permissions
+<p>This project demonstrates the use of AWS CloudFormation to managed IAM permissions for different teams within an organisation. It allows the creation and update IAM Groups and Policies. By leveraging Infrastructure as Code, the script ensures consistency and reduces the risks associated with manual configuration.</br>
+<a href="https://github.com/chris-royall/aws-iam-permissions">GitHub Repository</a></p>
+
 ## 
 <a href="https://www.credly.com/badges/a41964c2-fa5e-4a70-9679-f54e1716f80d/public_url" target="_blank" class="secondary_badges"><img src="secondary_badges/aws-cloud-quest-cloud-practitioner.png" alt="aws-cloud-quest-cloud-practitioner" height="100" width="100"/></a>
 <a href="https://www.credly.com/badges/17653143-16b3-4e17-bce6-593bc0c3e888/public_url" target="_blank" class="secondary_badges"><img src="secondary_badges/aws-cloud-quest-solutions-architect.png" alt="aws-cloud-quest-solutions-architect" height="100" width="100"/></a>
