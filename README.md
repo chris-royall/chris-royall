@@ -24,6 +24,10 @@
 <p>This project demonstrates the use of AWS CloudFormation to managed IAM permissions for different teams within an organisation. It allows the creation and update IAM Groups and Policies. By leveraging Infrastructure as Code, the script ensures consistency and reduces the risks associated with manual configuration.</br>
 <a href="https://github.com/chris-royall/aws-iam-permissions">GitHub Repository</a></p>
 
+### Terraform-Deployed Scalable User Management Service
+<p>This project creates infrastructure using IaC Terraform to build a User Management Service. This service demonstrates how to deploy a scalable and serverless backend for managing user data using AWS services. It serves as an example of leveraging AWS Lambda, API Gateway, and DynamoDB in a serverless architecture.</br>
+<a href="https://github.com/chris-royall/serverless-user-management">GitHub Repository</a></p>
+
 ## 
 <a href="https://www.credly.com/badges/a41964c2-fa5e-4a70-9679-f54e1716f80d/public_url" target="_blank" class="secondary_badges"><img src="secondary_badges/aws-cloud-quest-cloud-practitioner.png" alt="aws-cloud-quest-cloud-practitioner" height="100" width="100"/></a>
 <a href="https://www.credly.com/badges/17653143-16b3-4e17-bce6-593bc0c3e888/public_url" target="_blank" class="secondary_badges"><img src="secondary_badges/aws-cloud-quest-solutions-architect.png" alt="aws-cloud-quest-solutions-architect" height="100" width="100"/></a>
