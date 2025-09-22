@@ -10,23 +10,23 @@
 
 ## Projects
 
-### Angular Web Application
-<p>This repository showcases my skills in front-end development and AWS cloud services by implementing a functional web application with advanced logging, email automation, and data retention strategies.</br>
-<a href="https://github.com/chris-royall/portfolio">GitHub Repository</a></br>
+### Portfolio Website
+<a href="https://github.com/chris-royall/portfolio-reactapp">Frontend Repository</a></br>
+<a href="https://github.com/chris-royall/portfolio-cloudformation">Backend Repository</a></br>
 <a href="https://chrisroyall.com">Web Application</a></br></p>
 
-### AI Recipe Generator
-<p>This repository highlights my experience in front-end development and AWS cloud services through the creation of a functional, AI-powered web application. The app generates recipes based on user inputs, features secure user authentication, and includes advanced logging mechanisms.</br>
-<a href="https://github.com/chris-royall/portfolio">GitHub Repository</a></br>
-<a href="https://recipes.chrisroyall.com">Web Application</a></br></p>
+### IP Geolocation Monitoring
+<a href="https://github.com/chris-royall/ip-geolocation">GitHub Repository</a></br>
 
-### AWS CloudFormation Deployed IAM Permissions
-<p>This project demonstrates the use of AWS CloudFormation to managed IAM permissions for different teams within an organisation. It allows the creation and update IAM Groups and Policies. By leveraging Infrastructure as Code, the script ensures consistency and reduces the risks associated with manual configuration.</br>
-<a href="https://github.com/chris-royall/aws-iam-permissions">GitHub Repository</a></p>
+### AI-Powered Applications
+<a href="https://github.com/chris-royall/ai-recipe-generator">Recipe Generator</a></br>
+<a href="https://github.com/chris-royall/ai-race-strat-predictor">Race Strategy</a>
 
-### Terraform-Deployed Scalable User Management Service
-<p>This project creates infrastructure using IaC Terraform to build a User Management Service. This service demonstrates how to deploy a scalable and serverless backend for managing user data using AWS services. It serves as an example of leveraging AWS Lambda, API Gateway, and DynamoDB in a serverless architecture.</br>
-<a href="https://github.com/chris-royall/serverless-user-management">GitHub Repository</a></p>
+### User Management Service
+<a href="https://github.com/chris-royall/serverless-user-management">GitHub Repository</a>
+
+### IAM Permissions Management
+<a href="https://github.com/chris-royall/aws-iam-permissions">GitHub Repository</a>
 
 ## 
 <a href="https://www.credly.com/badges/a41964c2-fa5e-4a70-9679-f54e1716f80d/public_url" target="_blank" class="secondary_badges"><img src="secondary_badges/aws-cloud-quest-cloud-practitioner.png" alt="aws-cloud-quest-cloud-practitioner" height="100" width="100"/></a>
