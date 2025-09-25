@@ -29,6 +29,7 @@
 <a href="https://github.com/chris-royall/aws-iam-permissions">GitHub Repository</a>
 
 ## 
+<a href="https://credentials.databricks.com/8ee0e5f3-406f-4d66-9793-77735bef19a1#acc.PHMtcbah" target="_blank" class="secondary_badges"><img src="secondary_badges/d2d24d56-8a55-4923-9959-0b3cf400f224.png" alt="databricks-generative-ai-fundamentals" height="100" width="100"/></a>
 <a href="https://www.credly.com/badges/a41964c2-fa5e-4a70-9679-f54e1716f80d/public_url" target="_blank" class="secondary_badges"><img src="secondary_badges/aws-cloud-quest-cloud-practitioner.png" alt="aws-cloud-quest-cloud-practitioner" height="100" width="100"/></a>
 <a href="https://www.credly.com/badges/17653143-16b3-4e17-bce6-593bc0c3e888/public_url" target="_blank" class="secondary_badges"><img src="secondary_badges/aws-cloud-quest-solutions-architect.png" alt="aws-cloud-quest-solutions-architect" height="100" width="100"/></a>
 <a href="https://www.credly.com/badges/bf7123f8-d6fa-4668-a586-297a335a77ee/public_url" target="_blank" class="secondary_badges"><img src="secondary_badges/aws-knowledge-cloud-essentials.png" alt="aws-knowledge-cloud-essentials" height="100" width="100"/></a>
