@@ -15,6 +15,9 @@
 <a href="https://github.com/chris-royall/portfolio-cloudformation">Backend Repository</a></br>
 <a href="https://chrisroyall.com">Web Application</a></br></p>
 
+### AI RAG Knowledge Base
+<a href="https://github.com/chris-royall/rag-knowledge-base">GitHub Repository</a></br>
+
 ### IP Geolocation Monitoring
 <a href="https://github.com/chris-royall/ip-geolocation">GitHub Repository</a></br>
 
