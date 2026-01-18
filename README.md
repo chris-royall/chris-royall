@@ -18,6 +18,9 @@
 ### AI RAG Knowledge Base
 <a href="https://github.com/chris-royall/rag-knowledge-base">GitHub Repository</a></br>
 
+### EC2 Linux Log Collector
+<a href="https://github.com/chris-royall/ec2-log-collector">GitHub Repository</a></br>
+
 ### IP Geolocation Monitoring
 <a href="https://github.com/chris-royall/ip-geolocation">GitHub Repository</a></br>
 
